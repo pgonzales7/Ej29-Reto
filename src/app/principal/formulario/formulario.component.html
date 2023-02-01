@@ -1,0 +1,23 @@
+<section class="bg-light">
+    <section class="container-sm pt-4 pb-3">
+        <form (ngSubmit)="Procesar()">
+            <h2>Artículo</h2>
+            
+                <section class="form-group">
+                    <label for="titulo">Ingrese Descripcion</label>
+                    <input type="text" class="form-control" name="titulo" [(ngModel)]="datos[0].Descripcion">
+                </section>
+                <section class="form-group">
+                    <label for="nombre">Ingrese Precio</label>
+                    <input type="text" class="form-control" name="nombre" [(ngModel)]="datos[0].Precio">
+                </section>
+
+            <section class="form-group">
+               <input type="submit" value="Confirmar" class="btn btn-primary mt-4 ms-2">
+            </section>  
+        </form>
+            <div mat-dialog-actions>
+                <button mat-button (click)="onNoClick()" class="btn btn-secondary">Cancelar</button>
+            </div>
+    </section>
+</section>

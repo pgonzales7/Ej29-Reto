@@ -1,0 +1,35 @@
+<section class="container-sm mt-4">
+<section>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Descripcion</th>
+                <th>Precio</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of registros">
+                <td>{{item.Id}}</td>
+                <td>{{item.Descripcion}}</td>
+                <td>{{item.Precio}}</td>
+                <td>
+                    <input class="btn btn-danger" type="button" value="Delete" (click)="Eliminar(item.Id)">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<ol>
+    <li>
+      <button mat-raised-button (click)="openDialog()">Agregar artículo</button>
+    </li>
+    <li *ngIf="animal">
+      You chose: <i>{{animal}}</i>
+    </li>
+</ol>
+
+</section>
